@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/x-icon" href="favicon.jpg">
+    <title>Car Trade Center</title>
+	<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+	<!-- Navigation Bar Starts -->
+	<nav>
+		<img src="favicon.jpg" onclick="goToHome()" />
+		<h1 onclick="goToHome()">Car Trade Center</h1>
+		<span id="open-menu" onclick="openMenu()">&#9776;</span>
+		<div id="main-menu"></div> <!--Dynamic-->
+	</nav>
+	<!-- Navigation Bar Ends -->
+
+	<!-- Banner Starts -->
+		<div class="banner" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('mainBanner.jpg');">
+			<div class="banner-title">
+				<h1>Where Every Car Finds Its Perfect Match</h1>
+				<a href="contact.html" target="_self"><button>Get An Offer</button></a>
+			</div>
+		</div>
+	<!-- Banner Ends -->
+	
+	<!-- brans, model photo gallery starts -->
+	<section class="select-brand">
+		<h1>Select Your Favourite Brand</h1>
+		<div class="gallery">
+			<div class="gallery-items"><a target="_self" href="brands/maruti/maruti.html"><img src="Logos/maruti.png" /></a></div>
+			<div class="gallery-items"><a target="_self" href="brands/kia/kia.html"><img src="Logos/kia.png" /></a></div>
+			<div class="gallery-items"><a target="_self" href="brands/tata/tata.html"><img src="Logos/tata.png" /></a></div>
+			<div class="gallery-items"><a target="_self" href="brands/toyota/toyota.html"><img src="Logos/toyota.png" /></a></div>
+		</div>
+	</section>
+	<!-- brands, model photo gallery ends -->
+
+	<script src="script.js"></script>
+</body>
+</html>
