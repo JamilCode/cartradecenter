@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<base href="../../../index.html" target="_blank">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/x-icon" href="favicon.jpg">
+    <title>Car Trade Center</title>
+	<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+		<!-- Navigation Bar Starts -->
+	<nav>
+		<img src="favicon.jpg" onclick="goToHome()" />
+		<h1 onclick="goToHome()">Car Trade Center</h1>
+		<span id="open-menu" onclick="openMenu()">&#9776;</span>
+		<div id="main-menu"></div>
+	</nav>
+	<!-- Navigation Bar Ends -->
+
+	<section class="overview">	<!--Slide Show Starts-->
+		<div class="slideshow" id="main-slide"></div> <!--Slide Show-->
+		<div class="details">
+			<h1 class="car-name" id="contact-for">Maruti Suzuki <span id="model-name">Super-Carry</span></h1>
+			<spam class="car-price">New Car Price: ₹ 5.1 - 6 Lakh <br><button onclick="openPopUp()">Buy Now</button></spam><br/>
+			<button onclick="openPopUp()">Check Used Car Price</button>
+			<button onclick="openPopUp()">Talk With Car Expert</button>
+		</div>
+	</section>	<!--Slide Show Ends-->
+
+	<section class="spec">
+		<h1 class="spec-title">Key Specifications</h1>
+		<table>
+  <tbody>
+    <tr>
+      <td>Fuel Type</td>
+      <td>CNG</td>
+    </tr>
+    <tr>
+      <td>Engine Displacement</td>
+      <td>1196 cc</td>
+    </tr>
+    <tr>
+      <td>No. of Cylinders</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>Max Power</td>
+      <td>72.41bhp@6000rpm</td>
+    </tr>
+    <tr>
+      <td>Max Torque</td>
+      <td>98Nm@3000rpm</td>
+    </tr>
+    <tr>
+      <td>Seating Capacity</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>Transmission Type</td>
+      <td>Manual</td>
+    </tr>
+    <tr>
+      <td>Fuel Tank Capacity</td>
+      <td>30 Litres</td>
+    </tr>
+    <tr>
+      <td>Body Type</td>
+      <td>Pickup Truck</td>
+    </tr>
+  </tbody>
+</table>
+	</section>
+	
+	<script src="brands/maruti/marutiScript.js"></script> <!--Using for slideshow-->
+	<script src="script.js"></script>
+</body>
+</html>

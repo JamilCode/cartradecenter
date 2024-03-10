@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<base href="../../../index.html" target="_blank">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/x-icon" href="favicon.jpg">
+    <title>Car Trade Center</title>
+	<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+		<!-- Navigation Bar Starts -->
+	<nav>
+		<img src="favicon.jpg" onclick="goToHome()" />
+		<h1 onclick="goToHome()">Car Trade Center</h1>
+		<span id="open-menu" onclick="openMenu()">&#9776;</span>
+		<div id="main-menu"></div>
+	</nav>
+	<!-- Navigation Bar Ends -->
+
+	<section class="overview">	<!--Slide Show Starts-->
+		<div class="slideshow" id="main-slide"></div> <!--Slide Show-->
+		<div class="details">
+			<h1 class="car-name" id="contact-for">Maruti Suzuki <span id="model-name">Ertiga</span></h1>
+			<spam class="car-price">New Car Price: ₹ 8.4 - 12.3 Lakh <br><button onclick="openPopUp()">Buy Now</button></spam><br/>
+			<button onclick="openPopUp()">Check Used Car Price</button>
+			<button onclick="openPopUp()">Talk With Car Expert</button>
+		</div>
+	</section>	<!--Slide Show Ends-->
+
+	<section class="spec">
+		<h1 class="spec-title">Key Specifications</h1>
+		<table>
+  <tbody>
+    <tr>
+      <td>ARAI Mileage</td>
+      <td>20.3 kmpl</td>
+    </tr>
+    <tr>
+      <td>Fuel Type</td>
+      <td>Petrol</td>
+    </tr>
+    <tr>
+      <td>Engine Displacement</td>
+      <td>1462 cc</td>
+    </tr>
+    <tr>
+      <td>No. of Cylinders</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>Max Power</td>
+      <td>101.64bhp@6000rpm</td>
+    </tr>
+    <tr>
+      <td>Max Torque</td>
+      <td>136.8Nm@4400rpm</td>
+    </tr>
+    <tr>
+      <td>Seating Capacity</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>Transmission Type</td>
+      <td>Automatic</td>
+    </tr>
+    <tr>
+      <td>Boot Space</td>
+      <td>209 Litres</td>
+    </tr>
+    <tr>
+      <td>Fuel Tank Capacity</td>
+      <td>45 Litres</td>
+    </tr>
+    <tr>
+      <td>Body Type</td>
+      <td>MUV</td>
+    </tr>
+    <tr>
+      <td>Service Cost</td>
+      <td>Rs.5,192 Avg. of 5 years</td>
+    </tr>
+  </tbody>
+</table>
+		<h1 class="spec-title">Key Features</h1>
+		<table>
+  <tbody>
+    <tr>
+      <td>Power Steering</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Power Windows Front</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Anti Lock Braking System</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Air Conditioner</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Driver Airbag</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Passenger Airbag</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Automatic Climate Control</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Alloy Wheels</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Multi-function Steering Wheel</td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>		
+	</section>
+	
+	<script src="brands/maruti/marutiScript.js"></script> <!--Using for slideshow-->
+	<script src="script.js"></script>
+</body>
+</html>
