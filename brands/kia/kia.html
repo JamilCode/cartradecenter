@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<base href="../../index.html" target="_blank">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/x-icon" href="favicon.jpg">
+    <title>Car Trade Center</title>
+	<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+	<!-- Navigation Bar Starts -->
+	<nav>
+		<img src="favicon.jpg" onclick="goToHome()" />
+		<h1 onclick="goToHome()">Car Trade Center</h1>
+		<span id="open-menu" onclick="openMenu()">&#9776;</span>
+		<div id="main-menu"></div>
+	</nav>
+	<!-- Navigation Bar Ends -->
+
+	<!-- Banner Starts -->
+	<div class="banner" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('brands/kia/banner.webp');">
+		<div class="banner-title">
+			<h1>KIA</h1>
+			<a href="contact.html" target="_self"><button>Get An Offer</button></a>
+		</div>
+	</div>
+	<!-- Banner Ends -->
+
+	<!-- brans, model photo gallery starts -->	
+	<section class="select-brand">
+		<h1>Select Your Model</h1>
+		<div class="gallery">
+			<div class="gallery-items"><a target="_self" href="brands/kia/models/seltos.html"><img src="brands/kia/models/modelPics/seltos.png" /></a><strong>Seltos</strong></div>
+			
+			<div class="gallery-items"><a target="_self" href="brands/kia/models/sonet.html"><img src="brands/kia/models/modelPics/sonet.png" /></a><strong>Sonet</strong></div>
+			
+			<div class="gallery-items"><a target="_self" href="brands/kia/models/ev6.html"><img src="brands/kia/models/modelPics/ev6.png" /></a><strong>EV6</strong></div>
+			
+			<div class="gallery-items"><a target="_self" href="brands/kia/models/carens.html"><img src="brands/kia/models/modelPics/carens.png" /></a><strong>Carens</strong></div>
+		</div>
+	</section>
+	<!-- brans, model photo gallery ends -->
+	<script src="script.js"></script>
+</body>
+</html>
