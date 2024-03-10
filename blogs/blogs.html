@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<base href="../index.html" target="_blank">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/x-icon" href="favicon.jpg">
+    <title>Car Trade Center</title>
+	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" href="blogs/blogstyle.css" />
+</head>
+<body>
+	<!-- Navigation Bar Starts -->
+	<nav>
+		<img src="favicon.jpg" onclick="goToHome()" />
+		<h1 onclick="goToHome()">Car Trade Center</h1>
+		<span id="open-menu" onclick="openMenu()">&#9776;</span>
+		<div id="main-menu"></div> <!--Dynamic-->
+	</nav>
+	<!-- Navigation Bar Ends -->
+
+	<!-- Banner Starts -->
+		<div class="banner" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('mainBanner.jpg');">
+			<div class="banner-title">
+				<h1>Car Blogs</h1>
+				<a href="contact.html" target="_self"><button>Get An Offer</button></a>
+			</div>
+		</div>
+	<!-- Banner Ends -->
+	
+	<!-- blog menu starts -->
+    <div class="blog-container">
+        <a href="blogs/posts/alto800p1.html" target="_self" class="blog-card">
+            <img src="https://lh3.googleusercontent.com/pw/AP1GczOFXL8XVXp9ini4V05VSxjkvkPhIUU5k9uMVrRxySlclOP1fkfkDzMvkwjC9Kt8OjHKAeDfy8ejdGq2v3tCzqUEcgWr3Zc63kQzB5upbN_5BsU3naUXXfGHsTuXvAOoj9iNhSk_xG8cEzc-0aqhu6I=w300-h150-s-no?authuser=2" alt="Blog Post Image">
+            <div class="content">
+                <h2>Why do people love Alto 800</h2>
+                <p>Top 5 reason to love alto 800. India's top selling car.</p>
+            </div>
+        </a>
+		
+		
+        <!-- Add more blog post cards as needed -->
+
+    </div>
+	<!-- blog menu ends -->
+
+	<script src="script.js"></script>
+</body>
+</html>
