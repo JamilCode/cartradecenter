@@ -122,6 +122,7 @@ footer.innerHTML = `<div class="faq-container">Frequently Asked Questions
 			<li><a target="_self" href="brands/maruti/maruti.html">Maruti</a></li>
 			<li><a target="_self" href="brands/kia/kia.html">Kia</a></li>
 			<li><a target="_self" href="brands/toyota/toyota.html">Toyota</a></li>
+			<li><a target="_self" href="brands/hyundai/hyundai.html">Hyundai</a></li>
 		</ul>
 	</div>
 </div>`;

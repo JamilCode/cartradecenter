@@ -418,7 +418,14 @@ footer {
   overflow: hidden;
 }
 /*FAQ Ends*/
-
+.video-brochure {
+	width: 80%;
+    margin-top: 10px;
+    border: 0;
+    height: 45vw;
+    margin-left: 50%;
+    transform: translate(-50%, 0);
+}
 /* For mobile screen starts */
 @media screen and (max-width: 600px) {
 
@@ -460,10 +467,6 @@ footer {
 
 	.banner-title {
 		top: 50%;
-	}
-
-	iframe {
-		height: 100vw;
 	}
 }
 /* For mobile screen ends */
