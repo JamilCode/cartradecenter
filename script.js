@@ -7,7 +7,7 @@ mainMenu.innerHTML = `<span id="close-menu" onclick="closeMenu()">&#10006;</span
 <a target="_self" href="index.html">Home</a>
 <a target="_self" href="contact.html">Contact</a>
 <a target="_self" href="about.html">About</a>
-<a target="_self" href="blogs/blogs.html">Blog</a>`;
+<a target="_self" href="https://cartradecenter.blogspot.com/">Blog</a>`;
 
 function openMenu() {
 	mainMenu.style.left = "0";
@@ -113,7 +113,7 @@ footer.innerHTML = `<div class="faq-container">Frequently Asked Questions
 			<li><a target="_self" href="index.html">Home</a></li>
 			<li><a target="_self" href="about.html">About</a></li>
 			<li><a target="_self" href="contact.html">Contact</a></li>
-			<li><a target="_self" href="blogs/blogs.html">Blog</a></li>
+			<li><a target="_self" href="https://cartradecenter.blogspot.com/">Blog</a></li>
 		</ul>
 	</div>
 	<div class="footer-list">
