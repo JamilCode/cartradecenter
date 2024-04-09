@@ -51,6 +51,12 @@ if(document.getElementById("contact-for") !== undefined) {
 		<input type="text" id="interest" name ="interest" hidden>
 		<input type="submit" value="Submit">
 		<button onclick="closePopUp()">Close</button>
+	</form>
+	<img id="loadingForm" style="display: none;" src="loadingForm.gif"/>
+	<form name="Page Log">
+		<input type="text" name ="ip" hidden>
+		<input type="text" name ="url" hidden>
+		<input type="text" name ="ref" hidden>
 	</form>`;
 
 }	
@@ -64,13 +70,15 @@ document.addEventListener("DOMContentLoaded", function() {
 	function afterSubmit() {
 		form.reset();
 		thankYou.style.display = "block";
-		form.style.display = "none";
+		container.children[2].style.display = "none";
 	}
 	form.addEventListener("submit", (e) => {
 		e.preventDefault();
+		container.children[2].style.display = "block";
+		form.style.display = "none";
 		fetch(scriptURL, { method: "POST", body: new FormData(form) })
 		.then((response) => {
-			console.log("Success!", response);
+			console.log("Thank You");
 			afterSubmit();
 		})
 		.catch((error) => {
@@ -79,7 +87,54 @@ document.addEventListener("DOMContentLoaded", function() {
 		});
 	});
 });
+
+setTimeout(function() {
+	if(confirm("Do you want to talk with Car Expert?")){
+		openPopUp();
+	}
+	else {
+		setTimeout(function() {
+			if(confirm("Get Special Discount")){
+				openPopUp();
+			}
+		}, 5000);
+	}
+}, 6000);
+
 //----------- Form Ends
+
+//----------- Log Starts
+let pageLogForm = container.children[3];
+pageLogForm.children[0].value = new Date();
+let logScriptURL = "https://script.google.com/macros/s/AKfycbwBYO_WVPVH7RXksFn49jda2ZHINxfIRypfm3OciYsYTQws3sW5Z_seFnjAJp-VRjYacg/exec";
+
+function getIP() {
+    fetch('https://api.ipify.org?format=json')
+        .then(response => response.json())
+        .then(data => {
+            pageLogForm.children[0].value = data.ip;
+        })
+        .catch(error => {
+            console.error('Error fetching IP address:', error);
+        });
+}
+getIP();
+pageLogForm.children[1].value = document.URL;
+pageLogForm.children[2].value = document.referrer;
+
+setTimeout(function(){
+	
+fetch(logScriptURL, { method: "POST", body: new FormData(pageLogForm) })
+.then((response) => {
+	console.log("Thank You");
+})
+.catch((error) => {
+		console.error("Error!", error.message);
+// Additional function call if there's an error with the fetch
+});
+}, 5000);
+//----------- Log Ends
+
 
 //----------- Footer Starts
 let footer = document.createElement("footer");
@@ -138,3 +193,79 @@ function answer(button) {
     }
   };
 //----------- Footer Ends
+//----------- Car Price Starts
+let carPrice = {
+	marutisuzukialto800: "₹ 3 - 5.1 Lakh",
+	marutisuzukialto800tour: "₹ 4 - 5.5 Lakh",
+	marutisuzukialtok10: "₹ 3.99 - 4.96 Lakh",
+	marutisuzukibaleno: "₹ 6.4 - 9 Lakh",
+	marutisuzukibrezza: "₹ 7.8 - 13.14 Lakh",
+	marutisuzukicelerio: "₹ 5 - 6.9 Lakh",
+	marutisuzukiciaz: "₹ 9.10 - 12 Lakh",
+	marutisuzukidzire: "₹ 5.9 - 9.3 Lakh",
+	marutisuzukieeco: "₹ 5.32 - 6.58 Lakh",
+	marutisuzukieecocargo: "₹ 5.2 - 6.4 Lakh",
+	marutisuzukiertiga: "₹ 8.4 - 12.3 Lakh",
+	marutisuzukiertigatour: "₹ 9.5 - 10 Lakh",
+	marutisuzukifronx: "₹ 7.51 - 13.04 Lakh",
+	marutisuzukigrandvitara: "₹ 9.9 - 20 Lakh",
+	marutisuzukiignis: "₹ 4.4 - 8.1 Lakh",
+	marutisuzukiinvicto: "₹ 25.1 - 28.2 Lakh",
+	marutisuzukijimny: "₹ Rs.11.8 - 14.95 Lakh",
+	marutisuzukispresso: "₹ 4.2 - 6 Lakh",
+	marutisuzukisupercarry: "₹ 5.1 - 6 Lakh",
+	marutisuzukiswift: "₹ 5 - 8 Lakh",
+	marutisuzukiswiftdziretour: "₹ 6 - 7.4 Lakh",
+	marutisuzukiwagonr: "₹ 4.9 - 6.91 Lakh",
+	marutisuzukiwagonrtour: "₹ 5 - 6.2 Lakh",
+	marutisuzukixl6: "₹ 11 - 14.5 Lakh",
+	hyundaialcazar: "₹ 15.5 - 20.8 Lakh",
+	hyundaiaura: "₹ 6.1 - 9 Lakh",
+	hyundaicreta: "₹ 10 - 20 Lakh",
+	hyundaicretaNLine: "₹ 15.8 - 20 Lakh",
+	hyundaiexter: "₹ 6 - 9 Lakh",
+	hyundaigrandI10Nios: "₹ 5 - 8.56 Lakh",
+	hyundaii20: "₹ 7 - 10 Lakh",
+	hyundaii20NLine: "₹ 8.5 - 12.52 Lakh",
+	hyundaiioniq5: "₹ 44 - 45 Lakh",
+	hyundaikonaElectric: "₹ 22 - 24 Lakh",
+	hyundaitucson: "₹ 28.5 - 34 Lakh",
+	hyundaivenue: "₹ 7 - 12 Lakh",
+	hyundaivenueNLine: "₹ 11 - 13 Lakh",
+	hyundaiverna: "₹ 11 - 16 Lakh",
+	kiacarens: "₹ 9 - 16.55 Lakh",
+	kiaev6: "₹ 58.55 - 63.84 Lakh",
+	kiaseltos: "₹ 10 - 18.10 Lakh",
+	kiasonet: "₹ 7 - 15 Lakh",
+	tataaltroz: "₹ 6.65 - 10.8 Lakh",
+	tataharrier: "₹ 15 - 26.66 Lakh",
+	tatanexon: "₹ 8.15 - 15.60 Lakh",
+	tatanexonev: "₹ 14.49 - 19.29 Lakh",
+	tatapunch: "₹ 6 - 10 Lakh",
+	tatapunchev: "₹ 10.99 - 16 Lakh",
+	tatasafari: "₹ 16.5 - 27 Lakh",
+	tatatiago: "₹ 5.65 - 9.8 Lakh",
+	tatatiagoev: "₹ 7.5 - 12 Lakh",
+	tatatigor: "₹ 6 - 9.8 Lakh",
+	tatatigorev: "₹ 12 - 13.5 Lakh",
+	toyotacamry: "₹ 44.2 - 47 Lakh",
+	toyotafortuner: "₹ 33 - 50 Lakh",
+	toyotafortunerlegender: "₹ 42 - 45.64 Lakh",
+	toyotaglanza: "₹ 6 - 10 Lakh",
+	toyotahilux: "₹ 29.50 - 37.90 Lakh",
+	toyotainnovacrysta: "₹ 18.5 - 26.30 Lakh",
+	toyotainnovahycross: "₹ 18.8 - 29.5 Lakh",
+	toyotalandcruiser300: "₹ 2 - 2.5 Cr",
+	toyotarumion: "₹ 10 - 13.3 Lakh",
+	toyotaurbancruiserhyryder: "₹ 10 - 18 Lakh",
+	toyotavellfire: "₹ 1.18 - 1.40 Cr"
+};
+
+if(document.getElementsByClassName("car-name")[0] !== undefined) {
+    let carName = document.getElementsByClassName("car-name")[0].textContent.trim().toLowerCase().replace(/\s/g, "");
+    
+	document.getElementsByClassName("car-price")[0].innerHTML = `${carPrice[carName]} <br><button onclick="openPopUp()">Buy Now</button>`;
+} else {
+    console.error("Element with class 'car-name' not found.");
+}
+//----------- Car Price Ends

@@ -5,7 +5,7 @@ body {
 	box-sizing: border-box;
 	font-family: "Fredoka", sans-serif;
 	font-weight: 100;
-	background-color: #ced3d8;;
+	background-color: #ced3d8;
 	-ms-overflow-style: none;  /* IE and Edge Hide scrollbar */
 	scrollbar-width: none;  /* Firefox Hide scrollbar*/
 }
@@ -100,7 +100,7 @@ nav span::after {
 	cursor: pointer;
 	padding: 16px;
 	font-family: "Fredoka", sans-serif;
-	font-size: 1.1em;
+	font-size: 1em;
 	border-radius: 10px;
 }
 .banner-title button:hover {
@@ -260,10 +260,16 @@ tr:nth-child(even) {
 	height: 100px;
 	text-align: center;
 	margin-bottom: 130px;
-	font-weight: 600;
 }
 .car-name {
-   margin-bottom: 5px;
+	margin-bottom: 5px;
+	font-weight: 400;
+	font-size: 2em;
+}
+.car-price {
+	font-size: larger;
+	font-family: fantasy;
+	font-weight: 100;
 }
   /* Adjusting image size */
 .slide img {
@@ -275,12 +281,15 @@ tr:nth-child(even) {
 
 /*--------------Buttons start*/
 button {
-	padding: 10px;
-    border-radius: 7px;
-    border: 1px solid black;
-    margin: 5px;
-    background-color: gainsboro;
-    box-shadow: 0 0 5px rgb(0 0 0 / 72%);
+	background-color: #f9be29;
+	color: black;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	width: 174px;
+    box-shadow: 0 0 2px rgb(0 0 0 / 40%);
 }
 button:hover {
 	background-color: #333;
@@ -315,7 +324,7 @@ input[type="tel"] {
 	border-radius: 4px;
 	box-sizing: border-box;
 }
-input[type="submit"], button {
+input[type="submit"] {
 	background-color: #4CAF50;
 	color: white;
 	padding: 14px 20px;

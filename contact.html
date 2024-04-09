@@ -31,6 +31,7 @@
 			<h3>Our Car Expert will contact you soon</h3>
 		</div>
 	</div>
+	<img id="loadingForm" style="display: none;position: absolute;left: 25%;width: 50%;top: 50%;" src="loadingForm.gif">
     <form name="Car Lead" style="width: 300px; position: absolute; top: 350px; left: 50%; transform: translate(-50%, 0);">
         <input type="text" id="name" name="name" placeholder="Your Name" required><br>
 		<input type="text" id="interest" name="interest" value="General" hidden>
@@ -42,15 +43,17 @@
 		const thankYou = document.getElementById("thankYouBanner");
 		const container = document.getElementById("container");
 		const form = document.forms["Car Lead"];
+		const loadingForm = document.getElementById("loadingForm");
 		function afterSubmit() {
             form.reset();
 			thankYou.style.display = "block";
 			container.style.display = "block";
-			form.style.display = "none";
-			
+			loadingForm.style.display = "none";
         }
 		form.addEventListener("submit", (e) => {
 			e.preventDefault();
+			loadingForm.style.display = "block";
+			form.style.display = "none";
 			fetch(scriptURL, { method: "POST", body: new FormData(form) })
 			.then((response) => {
 				console.log("Success!", response);
