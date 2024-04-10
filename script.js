@@ -104,7 +104,7 @@ setTimeout(function() {
 //----------- Form Ends
 
 //----------- Log Starts
-/* let pageLogForm = container.children[3];
+let pageLogForm = container.children[3];
 pageLogForm.children[0].value = new Date();
 let logScriptURL = "https://script.google.com/macros/s/AKfycbwBYO_WVPVH7RXksFn49jda2ZHINxfIRypfm3OciYsYTQws3sW5Z_seFnjAJp-VRjYacg/exec";
 
@@ -134,7 +134,6 @@ fetch(logScriptURL, { method: "POST", body: new FormData(pageLogForm) })
 });
 }, 5000);
 //----------- Log Ends
-*/
 
 //----------- Footer Starts
 let footer = document.createElement("footer");
