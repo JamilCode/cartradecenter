@@ -104,7 +104,7 @@ setTimeout(function() {
 //----------- Form Ends
 
 //----------- Log Starts
-let pageLogForm = container.children[3];
+/* let pageLogForm = container.children[3];
 pageLogForm.children[0].value = new Date();
 let logScriptURL = "https://script.google.com/macros/s/AKfycbwBYO_WVPVH7RXksFn49jda2ZHINxfIRypfm3OciYsYTQws3sW5Z_seFnjAJp-VRjYacg/exec";
 
@@ -134,13 +134,23 @@ fetch(logScriptURL, { method: "POST", body: new FormData(pageLogForm) })
 });
 }, 5000);
 //----------- Log Ends
-
+*/
 
 //----------- Footer Starts
 let footer = document.createElement("footer");
 document.body.appendChild(footer);
 
-footer.innerHTML = `<div class="faq-container">Frequently Asked Questions
+footer.innerHTML = `<section class="select-brand">
+		<h1>More Car Brands</h1>
+		<div class="gallery">
+			<div class="gallery-items"><a target="_self" href="brands/maruti/maruti.html"><img src="Logos/maruti.png" /></a></div>
+			<div class="gallery-items"><a target="_self" href="brands/kia/kia.html"><img src="Logos/kia.png" /></a></div>
+			<div class="gallery-items"><a target="_self" href="brands/tata/tata.html"><img src="Logos/tata.png" /></a></div>
+			<div class="gallery-items"><a target="_self" href="brands/toyota/toyota.html"><img src="Logos/toyota.png" /></a></div>
+			<div class="gallery-items"><a target="_self" href="brands/hyundai/hyundai.html"><img src="Logos/hyundai.png" /></a></div>
+		</div>
+	</section>
+<div class="faq-container">Frequently Asked Questions
 		<button class="faq" onclick="answer(this)">What is Car Trade Center?</button>
 		<div class="panel">
 			<p>Car Trade Center is your online destination to explore a variety of vehicles and find all the information you need to make a smart decision. We connect you with trusted dealers, making the car-buying process simple and efficient.</p>

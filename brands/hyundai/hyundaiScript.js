@@ -52,3 +52,39 @@ fetch(apiUrl, {
     }
 })
 .catch(error => console.error('Error fetching data:', error));
+
+//----------- More from Brand
+let brandSection = document.createElement("section");
+brandSection.className = "select-brand";
+document.getElementsByClassName("spec")[0].appendChild(brandSection);
+brandSection.innerHTML = `<hr><h1>More from Hyundai</h1>
+		<div class="gallery">
+			<div class="gallery-items"><a target="_self" href="brands/hyundai/models/alcazar.html"><img src="brands/hyundai/models/modelPics/alcazar.png" /></a><strong>Alcazar</strong></div>
+			
+			<div class="gallery-items"><a target="_self" href="brands/hyundai/models/aura.html"><img src="brands/hyundai/models/modelPics/aura.png" /></a><strong>Aura</strong></div>
+			
+			<div class="gallery-items"><a target="_self" href="brands/hyundai/models/creta.html"><img src="brands/hyundai/models/modelPics/creta.png" /></a><strong>Creta</strong></div>
+			
+			<div class="gallery-items"><a target="_self" href="brands/hyundai/models/cretaNLine.html"><img src="brands/hyundai/models/modelPics/cretaNLine.png" /></a><strong>Creta N Line</strong></div>
+			
+			<div class="gallery-items"><a target="_self" href="brands/hyundai/models/exter.html"><img src="brands/hyundai/models/modelPics/exter.png" /></a><strong>Exter</strong></div>
+			
+			<div class="gallery-items"><a target="_self" href="brands/hyundai/models/grandI10Nios.html"><img src="brands/hyundai/models/modelPics/grandI10Nios.png" /></a><strong>Grand i10 Nios</strong></div>
+			
+			<div class="gallery-items"><a target="_self" href="brands/hyundai/models/i20.html"><img src="brands/hyundai/models/modelPics/i20.png" /></a><strong>i20</strong></div>
+			
+			<div class="gallery-items"><a target="_self" href="brands/hyundai/models/i20NLine.html"><img src="brands/hyundai/models/modelPics/i20NLine.png" /></a><strong>i20 N Line</strong></div>
+			
+			<div class="gallery-items"><a target="_self" href="brands/hyundai/models/ioniq5.html"><img src="brands/hyundai/models/modelPics/ioniq5.png" /></a><strong>IONIQ 5</strong></div>
+			
+			<div class="gallery-items"><a target="_self" href="brands/hyundai/models/konaElectric.html"><img src="brands/hyundai/models/modelPics/konaElectric.png" /></a><strong>Kona Electric</strong></div>
+			
+			<div class="gallery-items"><a target="_self" href="brands/hyundai/models/tucson.html"><img src="brands/hyundai/models/modelPics/tucson.png" /></a><strong>Tucson</strong></div>
+			
+			<div class="gallery-items"><a target="_self" href="brands/hyundai/models/venue.html"><img src="brands/hyundai/models/modelPics/venue.png" /></a><strong>Venue</strong></div>
+			
+			<div class="gallery-items"><a target="_self" href="brands/hyundai/models/venueNLine.html"><img src="brands/hyundai/models/modelPics/venueNLine.png" /></a><strong>Venue N Line</strong></div>
+			
+			<div class="gallery-items"><a target="_self" href="brands/hyundai/models/verna.html"><img src="brands/hyundai/models/modelPics/verna.png" /></a><strong>Verna</strong></div>
+		</div>`;
+//----------- More from Brand

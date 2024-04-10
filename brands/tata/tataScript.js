@@ -50,3 +50,33 @@ fetch(apiUrl, {
     }
 })
 .catch(error => console.error('Error fetching data:', error));
+
+//----------- More from Brand
+let brandSection = document.createElement("section");
+brandSection.className = "select-brand";
+document.getElementsByClassName("spec")[0].appendChild(brandSection);
+brandSection.innerHTML = `<hr><h1>More from Tata</h1>
+		<div class="gallery">
+			<div class="gallery-items"><a target="_self" href="brands/tata/models/altroz.html"><img src="brands/tata/models/modelPics/altroz.png" /></a><strong>Altroz</strong></div>
+			
+			<div class="gallery-items"><a target="_self" href="brands/tata/models/harrier.html"><img src="brands/tata/models/modelPics/harrier.png" /></a><strong>Harrier</strong></div>
+			
+			<div class="gallery-items"><a target="_self" href="brands/tata/models/nexon.html"><img src="brands/tata/models/modelPics/nexon.png" /></a><strong>Nexon</strong></div>
+			
+			<div class="gallery-items"><a target="_self" href="brands/tata/models/nexonev.html"><img src="brands/tata/models/modelPics/nexon-ev.png" /></a><strong>Nexon EV</strong></div>
+			
+			<div class="gallery-items"><a target="_self" href="brands/tata/models/punch.html"><img src="brands/tata/models/modelPics/punch.png" /></a><strong>Punch</strong></div>
+			
+			<div class="gallery-items"><a target="_self" href="brands/tata/models/punchev.html"><img src="brands/tata/models/modelPics/punch-ev.png" /></a><strong>Punch EV</strong></div>
+			
+			<div class="gallery-items"><a target="_self" href="brands/tata/models/safari.html"><img src="brands/tata/models/modelPics/safari.png" /></a><strong>Safari</strong></div>
+			
+			<div class="gallery-items"><a target="_self" href="brands/tata/models/tiago.html"><img src="brands/tata/models/modelPics/tiago.png" /></a><strong>Tiago</strong></div>
+			
+			<div class="gallery-items"><a target="_self" href="brands/tata/models/tiagoev.html"><img src="brands/tata/models/modelPics/tiago-ev.png" /></a><strong>Tiago EV</strong></div>
+			
+			<div class="gallery-items"><a target="_self" href="brands/tata/models/tigor.html"><img src="brands/tata/models/modelPics/tigor.png" /></a><strong>Tigor</strong></div>
+			
+			<div class="gallery-items"><a target="_self" href="brands/tata/models/tigorev.html"><img src="brands/tata/models/modelPics/tigor-ev.png" /></a><strong>Tigor EV</strong></div>
+		</div>`;
+//----------- More from Brand

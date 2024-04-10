@@ -52,3 +52,33 @@ fetch(apiUrl, {
     }
 })
 .catch(error => console.error('Error fetching data:', error));
+
+//----------- More from Brand
+let brandSection = document.createElement("section");
+brandSection.className = "select-brand";
+document.getElementsByClassName("spec")[0].appendChild(brandSection);
+brandSection.innerHTML = `<hr><h1>More from Toyota</h1>
+		<div class="gallery">
+			<div class="gallery-items"><a target="_self" href="brands/toyota/models/glanza.html"><img src="brands/toyota/models/modelPics/glanza.png" /></a><strong>Glanza</strong></div>
+
+			<div class="gallery-items"><a target="_self" href="brands/toyota/models/innovahycross.html"><img src="brands/toyota/models/modelPics/innovahycross.png" /></a><strong>Innova Hycross</strong></div>
+			
+			<div class="gallery-items"><a target="_self" href="brands/toyota/models/fortunerlegender.html"><img src="brands/toyota/models/modelPics/fortunerlegender.png" /></a><strong>Fortuner Legender</strong></div>
+			
+			<div class="gallery-items"><a target="_self" href="brands/toyota/models/camry.html"><img src="brands/toyota/models/modelPics/camry.png" /></a><strong>Camry</strong></div>
+			
+			<div class="gallery-items"><a target="_self" href="brands/toyota/models/vellfire.html"><img src="brands/toyota/models/modelPics/vellfire.png" /></a><strong>Vellfire</strong></div>
+			
+			<div class="gallery-items"><a target="_self" href="brands/toyota/models/rumion.html"><img src="brands/toyota/models/modelPics/rumion.png" /></a><strong>Rumion</strong></div>
+			
+			<div class="gallery-items"><a target="_self" href="brands/toyota/models/hilux.html"><img src="brands/toyota/models/modelPics/hilux.png" /></a><strong>Hilux</strong></div>
+			
+			<div class="gallery-items"><a target="_self" href="brands/toyota/models/urbancruiserhyryder.html"><img src="brands/toyota/models/modelPics/urbancruiserhyryder.png" /></a><strong>Urban Cruiser Hyryder</strong></div>
+			
+			<div class="gallery-items"><a target="_self" href="brands/toyota/models/landcruiser300.html"><img src="brands/toyota/models/modelPics/landcruiser300.png" /></a><strong>Land Cruiser 300</strong></div>
+			
+			<div class="gallery-items"><a target="_self" href="brands/toyota/models/innovacrysta.html"><img src="brands/toyota/models/modelPics/innovacrysta.png" /></a><strong>Innova Crysta</strong></div>
+			
+			<div class="gallery-items"><a target="_self" href="brands/toyota/models/fortuner.html"><img src="brands/toyota/models/modelPics/fortuner.png" /></a><strong>Fortuner</strong></div>
+		</div>`;
+//----------- More from Brand

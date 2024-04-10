@@ -52,3 +52,19 @@ fetch(apiUrl, {
     }
 })
 .catch(error => console.error('Error fetching data:', error));
+
+//----------- More from Brand
+let brandSection = document.createElement("section");
+brandSection.className = "select-brand";
+document.getElementsByClassName("spec")[0].appendChild(brandSection);
+brandSection.innerHTML = `<hr><h1>More from KIA</h1>
+		<div class="gallery">
+			<div class="gallery-items"><a target="_self" href="brands/kia/models/seltos.html"><img src="brands/kia/models/modelPics/seltos.png" /></a><strong>Seltos</strong></div>
+			
+			<div class="gallery-items"><a target="_self" href="brands/kia/models/sonet.html"><img src="brands/kia/models/modelPics/sonet.png" /></a><strong>Sonet</strong></div>
+			
+			<div class="gallery-items"><a target="_self" href="brands/kia/models/ev6.html"><img src="brands/kia/models/modelPics/ev6.png" /></a><strong>EV6</strong></div>
+			
+			<div class="gallery-items"><a target="_self" href="brands/kia/models/carens.html"><img src="brands/kia/models/modelPics/carens.png" /></a><strong>Carens</strong></div>
+		</div>`;
+//----------- More from Brand

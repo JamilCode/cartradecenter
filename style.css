@@ -356,8 +356,8 @@ input[type="submit"]:hover, button:hover {
 
 /*--------------Footer Starts*/
 footer {
-	background-color: #333;
-	color: #fff;
+	background-color: #b9b9b9;
+	color: black;
 	padding: 20px 0;
 	text-align: center;
 	margin-top: 10px;
