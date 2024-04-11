@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 setTimeout(function() {
-	if(confirm("Do you want to talk with Car Expert?")){
+	if(confirm("Do you want a free test drive?")){
 		openPopUp();
 	}
 	else {
