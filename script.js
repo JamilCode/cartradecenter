@@ -23,6 +23,7 @@ function goToHome() {	// use this to go to home
 // Navigation Menu Ends
 
 //----------- Form Starts
+let ipadd;
 let interest;
 let scriptURL;
 let thankYou;
@@ -49,11 +50,14 @@ if(document.getElementById("contact-for") !== undefined) {
 		<input type="text" id="name" name="name" placeholder="Your Name" required><br>
 		<input type="tel" id="phone" name="phone" placeholder="Your Contact Number" pattern="[0-9]{10}" required><br>
 		<input type="text" id="interest" name ="interest" hidden>
+		<input type="text" name ="ip" hidden>
+		<input type="text" name ="url" hidden>
+		<input type="text" name ="ref" hidden>
 		<input type="submit" value="Submit">
 		<button onclick="closePopUp()">Close</button>
 	</form>
-	<img id="loadingForm" style="display: none;" src="loadingForm.gif"/>
-	<form name="Page Log">
+	<img id="loadingForm" style="display: none; width: 50vw; margin-left: 50%; transform: translate(-50%, 0);" src="loadingForm.gif"/>
+	<form name="Page Log" style="display: none;">
 		<input type="text" name ="ip" hidden>
 		<input type="text" name ="url" hidden>
 		<input type="text" name ="ref" hidden>
@@ -76,6 +80,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		e.preventDefault();
 		container.children[2].style.display = "block";
 		form.style.display = "none";
+		container.children['Car Lead'].children['ip'].value = ipadd;
+		container.children['Car Lead'].children['url'].value = document.URL;
+		container.children['Car Lead'].children['ref'].value = document.referrer;
 		fetch(scriptURL, { method: "POST", body: new FormData(form) })
 		.then((response) => {
 			console.log("Thank You");
@@ -88,18 +95,17 @@ document.addEventListener("DOMContentLoaded", function() {
 	});
 });
 
+function carPop() {
+	document.getElementById("car-pop").style.display = "none";
+	openPopUp();
+}
+function closeCarPop() {
+	document.getElementById("car-pop").style.display = "none";
+}
+
 setTimeout(function() {
-	if(confirm("Do you want a free test drive?")){
-		openPopUp();
-	}
-	else {
-		setTimeout(function() {
-			if(confirm("Get Special Discount")){
-				openPopUp();
-			}
-		}, 5000);
-	}
-}, 6000);
+	document.getElementById("car-pop").style.display = "block";
+}, 10000);
 
 //----------- Form Ends
 
@@ -107,11 +113,11 @@ setTimeout(function() {
 let pageLogForm = container.children[3];
 pageLogForm.children[0].value = new Date();
 let logScriptURL = "https://script.google.com/macros/s/AKfycbwBYO_WVPVH7RXksFn49jda2ZHINxfIRypfm3OciYsYTQws3sW5Z_seFnjAJp-VRjYacg/exec";
-
 function getIP() {
     fetch('https://api.ipify.org?format=json')
         .then(response => response.json())
         .then(data => {
+			ipadd = data.ip;
             pageLogForm.children[0].value = data.ip;
         })
         .catch(error => {
@@ -139,7 +145,12 @@ fetch(logScriptURL, { method: "POST", body: new FormData(pageLogForm) })
 let footer = document.createElement("footer");
 document.body.appendChild(footer);
 
-footer.innerHTML = `<section class="select-brand">
+footer.innerHTML = `<div id="car-pop" style="display: none; position: fixed; top: 100px; left: 50%; transform: translate(-50%, 0); text-align: center; background-color: cadetblue; width: 80vw; margin: auto;">
+		<h1 style="font-family: fantasy; font-weight: 100; margin: 0;">Get A Test Drive?</h1>
+		<img src="test drive.gif" style="width: 100%;"/>
+		<button onclick="carPop()" style="width: 20vw; margin: 8px">Yes</button><button style="width: 20vw; margin: 8px;" onclick="closeCarPop()">No</button>
+	</div>
+<section class="select-brand">
 		<h1>More Car Brands</h1>
 		<div class="gallery">
 			<div class="gallery-items"><a target="_self" href="brands/maruti/maruti.html"><img src="Logos/maruti.png" /></a></div>
